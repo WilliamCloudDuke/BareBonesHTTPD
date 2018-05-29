@@ -17,6 +17,7 @@ public class BareBonesHTTPD extends Thread {
 	public void run() {
 
 		try {
+			System.out.println("Run active");
 			System.out.println(connectedClient.getInetAddress() + ":" + connectedClient.getPort() + " is connected");
 
 			BBHttpRequest httpRequest = getRequest(connectedClient.getInputStream());
