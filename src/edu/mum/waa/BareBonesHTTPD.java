@@ -17,7 +17,7 @@ public class BareBonesHTTPD extends Thread {
 	public void run() {
 
 		try {
-			System.out.println("Run active");
+			System.out.println("Run active  ");
 			System.out.println(connectedClient.getInetAddress() + ":" + connectedClient.getPort() + " is connected");
 
 			BBHttpRequest httpRequest = getRequest(connectedClient.getInputStream());
@@ -36,8 +36,6 @@ public class BareBonesHTTPD extends Thread {
 	}
 
 	private void processRequest(BBHttpRequest httpRequest, BBHttpResponse httpResponse) {
-		System.out.println("httpRequest; " + httpRequest);
-
 		StringBuilder response = new StringBuilder();
 		response.append("<!DOCTYPE html>");
 		response.append("<html>");
@@ -79,7 +77,7 @@ public class BareBonesHTTPD extends Thread {
 			return null;
 		}
 
-		System.out.println("The HTTP request is ....");
+		System.out.println("HTTP request: ");
 		System.out.println(headerLine);
 
 		// Header Line
